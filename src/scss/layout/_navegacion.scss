@@ -1,0 +1,94 @@
+.derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    align-items: flex-end;
+  }
+
+  .dark-mode-boton {
+    width: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    filter: invert(
+      100%
+    ); // como es un vector podemos usar filter que es una prop de css que nos permite crear efectos e invertimos su color al 100%
+
+    &:hover {
+      cursor: pointer;
+    }
+    @include tablet {
+      margin-top: 0;
+    }
+  }
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.navegacion {
+  visibility: hidden; // no va a ser visible y cuando llegue al pixel de tablet si
+  opacity: 0; // una forma de generar transparencia
+  height: 0;
+  transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear; // creamos una transicion de la prop visibility, en 0.3 seg y el efecto de ease-in-out // Luego animamos a la prop Opacity
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    opacity: 1; // para que cuando llegue a pixel de tablet se vea sumado al visibility
+    visibility: visible;
+  }
+
+  a {
+    color: $blanco;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+    text-align: center;
+
+    &:hover {
+      color: $verde;
+    }
+
+    @include tablet {
+      margin-right: 2rem;
+      font-size: 1.8rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+/** Menu de Hamburgesa **/
+.mobile-menu {
+  @include tablet {
+    // despues del pixel de tablet desaparece
+    display: none;
+  }
+
+  img {
+    width: 4rem;
+  }
+}
+// para centrarlo al menu lo hacemos mediante barra arriba / la navegacion no tiene que aparecer tampoco / y para cuando demos clic y que se abra la navegacion lo hacemos con JS (tmb se puede con css pero no se ve tan bien)
+
+.mostrar {
+  visibility: visible;
+  opacity: 1;
+  height: auto;  // toma el espacio que requiera
+}
+
+// A los display no se le puede sumar animacion. El displey: none; se puede reemplazar por visibility: hidden; hacen lo mismo
