@@ -14,8 +14,6 @@
 - Semantic HTML5 markup
 - CSS custom properties
 - SCSS
-- Flexbox
-- Grid
 - JavaScript
 - PHP
 - MySQL

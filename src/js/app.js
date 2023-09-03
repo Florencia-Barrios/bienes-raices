@@ -17,13 +17,13 @@ function darkMode() {
 
   // y si lo tiene en automatico al modo oscuro-claro:
 
-  prefiereDarkMode.eventListeners('change', function() {   // cuando cambie la opcion de dark mode vamos a ejecutarla siguiente funcion
-    if (prefiereDarkMode.matches) {
-        document.body.classList.add("dark-mode"); // si prefiere dark-mode entonces vamos a agregar a la clase automáticamente una vez que cargue el sitio web.
-      } else {
-        document.body.classList.remove("dark-mode");
-      }
-  });
+  // prefiereDarkMode.eventListeners('change', function() {   // cuando cambie la opcion de dark mode vamos a ejecutarla siguiente funcion
+  //   if (prefiereDarkMode.matches) {
+  //       document.body.classList.add("dark-mode"); // si prefiere dark-mode entonces vamos a agregar a la clase automáticamente una vez que cargue el sitio web.
+  //     } else {
+  //       document.body.classList.remove("dark-mode");
+  //     }
+  // });
 
 
   const botonDarkMode = document.querySelector(".dark-mode-boton");
