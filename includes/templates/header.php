@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienes Raices</title>
     <link rel="stylesheet" href="./build/css/app.css">
 </head>
+
 <body>
     <header class="header <?php echo $inicio ? 'inicio' : ''; ?>">
         <div class="contenedor contenido-header">
@@ -30,6 +32,8 @@
 
             </div> <!-- cierre de barra -->
 
-            <h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>
+            <?php if ($inicio) { ?> <!-- Solo aparece si esta con la clase incio en ejecucion -->
+                <h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>
+            <?php } ?>
         </div>
     </header>
