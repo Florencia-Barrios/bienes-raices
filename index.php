@@ -1,4 +1,7 @@
 <?php
+
+    require 'includes/funciones.php';
+
     $inicio = true;
     include './includes/templates/header.php';
 ?>
