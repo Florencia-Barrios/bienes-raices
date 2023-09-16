@@ -1,30 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
-  
+document.addEventListener("DOMContentLoaded", function () {
   eventListeners();
 
   darkMode();
 });
 
 function darkMode() {
-  const prefiereDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
-  // console.log(prefiereDarkMode.matches); vemos su preferencia con true o false
+   const prefiereDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+  // // console.log(prefiereDarkMode.matches); vemos su preferencia con true o false
 
-  if (prefiereDarkMode.matches){
-    document.body.classList.add('dark-mode'); // si prefiere dark-mode entonces vamos a agregar a la clase automáticamente una vez que cargue el sitio web.
+  if (prefiereDarkMode.matches) {
+    document.body.classList.add("dark-mode"); // si prefiere dark-mode entonces vamos a agregar a la clase automáticamente una vez que cargue el sitio web.
   } else {
-    document.body.classList.remove('dark-mode');
+    document.body.classList.remove("dark-mode");
   }
 
   // y si lo tiene en automatico al modo oscuro-claro:
 
-   prefiereDarkMode.eventListeners('change', function() {   // cuando cambie la opcion de dark mode vamos a ejecutarla siguiente funcion
-     if (prefiereDarkMode.matches) {
-         document.body.classList.add("dark-mode"); // si prefiere dark-mode entonces vamos a agregar a la clase automáticamente una vez que cargue el sitio web.
-       } else {
-         document.body.classList.remove("dark-mode");
-       }
+  prefiereDarkMode.addEventListener("change", function () {
+    // cuando cambie la opcion de dark mode vamos a ejecutarla siguiente funcion
+    if (prefiereDarkMode.matches) {
+      document.body.classList.add("dark-mode"); // si prefiere dark-mode entonces vamos a agregar a la clase automáticamente una vez que cargue el sitio web.
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
   });
-
 
   const botonDarkMode = document.querySelector(".dark-mode-boton");
 
