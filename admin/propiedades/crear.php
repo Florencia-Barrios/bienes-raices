@@ -8,6 +8,16 @@ incluirTemplate('header');
 
     <a href="/admin" class="boton boton-verde">Volver</a>
 
+    <form class="formulario">
+        <fieldset>
+            <legend>Información General</legend>
+
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" placeholder="Título Propiedad">
+
+        </fieldset>
+    </form>
+
 </main>
 
 <?php
