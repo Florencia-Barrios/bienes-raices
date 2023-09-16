@@ -15,6 +15,12 @@ incluirTemplate('header');
             <label for="titulo">Título:</label>
             <input type="text" id="titulo" placeholder="Título Propiedad">
 
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" placeholder="Precio Propiedad">
+
+            <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" accept="image/jpg">
+
         </fieldset>
     </form>
 
