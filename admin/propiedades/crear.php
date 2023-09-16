@@ -19,7 +19,10 @@ incluirTemplate('header');
             <input type="number" id="precio" placeholder="Precio Propiedad">
 
             <label for="imagen">Imagen:</label>
-            <input type="file" id="imagen" accept="image/jpg">
+            <input type="file" id="imagen" accept="image/jpg, image/png">
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion"></textarea>
 
         </fieldset>
     </form>
