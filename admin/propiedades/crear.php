@@ -2,7 +2,7 @@
 
 // Base de datos
 require '../../includes/config/databases.php';
-
+conectarDB();
 
 require '../../includes/funciones.php';
 incluirTemplate('header');
