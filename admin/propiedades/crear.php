@@ -31,25 +31,26 @@ incluirTemplate('header');
 
             <label for="habitaciones">Habitaciones:</label>
             <input type="number" id="habitaciones" placeholder="Ej: 3" min="1" max="9">
-        
+
             <label for="wc">Baños:</label>
             <input type="number" id="wc" placeholder="Ej: 3" min="1" max="9">
 
             <label for="estacionamiento">Estacionamiento:</label>
             <input type="number" id="estacionamiento" placeholder="Ej: 3" min="1" max="9">
-        
+
         </fieldset>
 
         <fieldset>
             <legend>Vendedor</legend>
 
             <select>
+<!-- Completamos los datos de vendedores que tenemos registrado en nuestra base de datos -->
                 <option value="1">Federico</option>
                 <option value="2">Florencia</option>
             </select>
         </fieldset>
 
-        
+        <input type="submit" value="Crear Propiedad" class="boton boton-verde">
     </form>
 
 </main>
