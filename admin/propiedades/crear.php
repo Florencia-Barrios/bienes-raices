@@ -39,6 +39,17 @@ incluirTemplate('header');
             <input type="number" id="estacionamiento" placeholder="Ej: 3" min="1" max="9">
         
         </fieldset>
+
+        <fieldset>
+            <legend>Vendedor</legend>
+
+            <select>
+                <option value="1">Federico</option>
+                <option value="2">Florencia</option>
+            </select>
+        </fieldset>
+
+        
     </form>
 
 </main>
